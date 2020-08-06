@@ -38,7 +38,50 @@
   font-size:15px;
 }
 
-#finish_message{
+#finish1_message{
+  display: inline-block;
+  text-align: left;
+  font-size:15px;
+}
+#finish2_message{
+  display: inline-block;
+  text-align: left;
+  font-size:15px;
+}
+#finish3_message{
+  display: inline-block;
+  text-align: left;
+  font-size:15px;
+}#finish4_message{
+  display: inline-block;
+  text-align: left;
+  font-size:15px;
+}#finish5_message{
+  display: inline-block;
+  text-align: left;
+  font-size:15px;
+}
+#finish6_message{
+  display: inline-block;
+  text-align: left;
+  font-size:15px;
+}
+#finish7_message{
+  display: inline-block;
+  text-align: left;
+  font-size:15px;
+}
+#finish8_message{
+  display: inline-block;
+  text-align: left;
+  font-size:15px;
+}
+#finish9_message{
+  display: inline-block;
+  text-align: left;
+  font-size:15px;
+}
+#error_message{
   display: inline-block;
   text-align: left;
   font-size:15px;
@@ -66,6 +109,8 @@ background:#009966;
 color:#fff;
 }
 
+
+
 .tab_test li.Active{
  background:#CCFFCC;
 color:#000;
@@ -76,7 +121,7 @@ padding:50px;
  margin-top:-1px;
  overflow:hidden;
  background:#CCFFCC;
- width:700px;
+ width:720px;
  margin-left:auto;margin-right:auto;
 }
 .tab_cnt div{

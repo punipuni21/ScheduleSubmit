@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>従業員限定ページ</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.14.2/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
+
+  </head>
+  <body>
+
+    <h1 class="title">ようこそ！</h1>
+    <div id="message"></div>
+
+    <form id="form1" action="#">
+    <ul class="tab_test">
+    <li id="tab1_test" class="Active">クルー向け</li>
+    <li id="tab2_test" class="NonActive">責任者向け</li>
+    </ul>
+    <div class="tab_cnt">
+    <div id="tab1_cnt" class="Active">
+
+      <a href="./file/" download="20200702.pdf">PDFをダウンロード</a>
+
+    <p>OKマーク用フォーム<br>氏名
+    <input type="text" id="YourName" value=""/></p>
+    <br>従業員コード
+    <input type="text" id="YourPass" value=""></p>
+
+    <li id="MONDAY" class="WEEK">月曜日&emsp;&emsp;&emsp;
+      <input type="checkbox" id="MonCheck" class="holiday">休み希望の時はこちらにチェックしてください<br>
+</li>
+    <p>出勤希望時間<br>
+    <input type="checkbox" class="MonTimes" value="10">10　
+    <input type="checkbox" class="MonTimes" value="11">11　
+    <input type="checkbox" class="MonTimes" value="12">12　
+    <input type="checkbox" class="MonTimes" value="13">13　
+    <input type="checkbox" class="MonTimes" value="14">14　
+    <input type="checkbox" class="MonTimes" value="15">15　
+    <input type="checkbox" class="MonTimes" value="16">16　
+    <input type="checkbox" class="MonTimes" value="17">17　
+    <input type="checkbox" class="MonTimes" value="18">18　
+    <input type="checkbox" class="MonTimes" value="19">19　
+    <input type="checkbox" class="MonTimes" value="20">20　
+    <input type="checkbox" class="MonTimes" value="21">21　
+    <input type="checkbox" class="MonTimes" value="22">22　
+    <input type="checkbox" class="MonTimes" value="23">23<br><br>
+
+
+    <li id="TUESDAY" class="WEEK">火曜日&emsp;&emsp;&emsp;
+         <input type="checkbox" id="MonCheck" class="holiday">休み希望の時はこちらにチェックしてください<br></li>
+         <p>出勤希望時間<br>
+    <input type="checkbox" class="MonTimes" value="10">10　
+    <input type="checkbox" class="MonTimes" value="11">11　
+    <input type="checkbox" class="MonTimes" value="12">12　
+    <input type="checkbox" class="MonTimes" value="13">13　
+    <input type="checkbox" class="MonTimes" value="14">14　
+    <input type="checkbox" class="MonTimes" value="15">15　
+    <input type="checkbox" class="MonTimes" value="16">16　
+    <input type="checkbox" class="MonTimes" value="17">17　
+    <input type="checkbox" class="MonTimes" value="18">18　
+    <input type="checkbox" class="MonTimes" value="19">19　
+    <input type="checkbox" class="MonTimes" value="20">20　
+    <input type="checkbox" class="MonTimes" value="21">21　
+    <input type="checkbox" class="MonTimes" value="22">22　
+    <input type="checkbox" class="MonTimes" value="23">23<br><br>
+    <li id="WEDNESDAY" class="WEEK">水曜日&emsp;&emsp;&emsp;
+          <input type="checkbox" id="MonCheck" class="holiday">休み希望の時はこちらにチェックしてください<br>
+    </li><p>出勤希望時間<br>
+    <input type="checkbox" class="MonTimes" value="10">10　
+    <input type="checkbox" class="MonTimes" value="11">11　
+    <input type="checkbox" class="MonTimes" value="12">12　
+    <input type="checkbox" class="MonTimes" value="13">13　
+    <input type="checkbox" class="MonTimes" value="14">14　
+    <input type="checkbox" class="MonTimes" value="15">15　
+    <input type="checkbox" class="MonTimes" value="16">16　
+    <input type="checkbox" class="MonTimes" value="17">17　
+    <input type="checkbox" class="MonTimes" value="18">18　
+    <input type="checkbox" class="MonTimes" value="19">19　
+    <input type="checkbox" class="MonTimes" value="20">20　
+    <input type="checkbox" class="MonTimes" value="21">21　
+    <input type="checkbox" class="MonTimes" value="22">22　
+    <input type="checkbox" class="MonTimes" value="23">23<br><br>
+    <li id="THURSDAY" class="WEEK">木曜日&emsp;&emsp;&emsp;
+          <input type="checkbox" id="MonCheck" class="holiday">休み希望の時はこちらにチェックしてください<br></li>
+          <p>出勤希望時間<br>
+    <input type="checkbox" class="MonTimes" value="10">10　
+    <input type="checkbox" class="MonTimes" value="11">11　
+    <input type="checkbox" class="MonTimes" value="12">12　
+    <input type="checkbox" class="MonTimes" value="13">13　
+    <input type="checkbox" class="MonTimes" value="14">14　
+    <input type="checkbox" class="MonTimes" value="15">15　
+    <input type="checkbox" class="MonTimes" value="16">16　
+    <input type="checkbox" class="MonTimes" value="17">17　
+    <input type="checkbox" class="MonTimes" value="18">18　
+    <input type="checkbox" class="MonTimes" value="19">19　
+    <input type="checkbox" class="MonTimes" value="20">20　
+    <input type="checkbox" class="MonTimes" value="21">21　
+    <input type="checkbox" class="MonTimes" value="22">22　
+    <input type="checkbox" class="MonTimes" value="23">23<br><br>
+    <li id="FRIDAY" class="WEEK">金曜日&emsp;&emsp;&emsp;
+          <input type="checkbox" id="MonCheck" class="holiday">休み希望の時はこちらにチェックしてください<br></li>
+          <p>出勤希望時間<br>
+    <input type="checkbox" class="MonTimes" value="10">10　
+    <input type="checkbox" class="MonTimes" value="11">11　
+    <input type="checkbox" class="MonTimes" value="12">12　
+    <input type="checkbox" class="MonTimes" value="13">13　
+    <input type="checkbox" class="MonTimes" value="14">14　
+    <input type="checkbox" class="MonTimes" value="15">15　
+    <input type="checkbox" class="MonTimes" value="16">16　
+    <input type="checkbox" class="MonTimes" value="17">17　
+    <input type="checkbox" class="MonTimes" value="18">18　
+    <input type="checkbox" class="MonTimes" value="19">19　
+    <input type="checkbox" class="MonTimes" value="20">20　
+    <input type="checkbox" class="MonTimes" value="21">21　
+    <input type="checkbox" class="MonTimes" value="22">22　
+    <input type="checkbox" class="MonTimes" value="23">23<br><br>
+    <li id="SATURDAY" class="WEEK">土曜日&emsp;&emsp;&emsp;
+          <input type="checkbox" id="MonCheck" class="holiday">休み希望の時はこちらにチェックしてください<br></li>
+          <p>出勤希望時間<br>
+    <input type="checkbox" class="MonTimes" value="10">10　
+    <input type="checkbox" class="MonTimes" value="11">11　
+    <input type="checkbox" class="MonTimes" value="12">12　
+    <input type="checkbox" class="MonTimes" value="13">13　
+    <input type="checkbox" class="MonTimes" value="14">14　
+    <input type="checkbox" class="MonTimes" value="15">15　
+    <input type="checkbox" class="MonTimes" value="16">16　
+    <input type="checkbox" class="MonTimes" value="17">17　
+    <input type="checkbox" class="MonTimes" value="18">18　
+    <input type="checkbox" class="MonTimes" value="19">19　
+    <input type="checkbox" class="MonTimes" value="20">20　
+    <input type="checkbox" class="MonTimes" value="21">21　
+    <input type="checkbox" class="MonTimes" value="22">22　
+    <input type="checkbox" class="MonTimes" value="23">23<br><br>
+    <li id="SUNDAY" class="WEEK">日曜日&emsp;&emsp;&emsp;
+          <input type="checkbox" id="MonCheck" class="holiday">休み希望の時はこちらにチェックしてください<br></li>
+          <p>出勤希望時間<br>
+    <input type="checkbox" class="MonTimes" value="10">10　
+    <input type="checkbox" class="MonTimes" value="11">11　
+    <input type="checkbox" class="MonTimes" value="12">12　
+    <input type="checkbox" class="MonTimes" value="13">13　
+    <input type="checkbox" class="MonTimes" value="14">14　
+    <input type="checkbox" class="MonTimes" value="15">15　
+    <input type="checkbox" class="MonTimes" value="16">16　
+    <input type="checkbox" class="MonTimes" value="17">17　
+    <input type="checkbox" class="MonTimes" value="18">18　
+    <input type="checkbox" class="MonTimes" value="19">19　
+    <input type="checkbox" class="MonTimes" value="20">20　
+    <input type="checkbox" class="MonTimes" value="21">21　
+    <input type="checkbox" class="MonTimes" value="22">22　
+    <input type="checkbox" class="MonTimes" value="23">23<br><br>
+
+    <div id="error_message"></div>
+    <div id="finish8_message"></div>
+    <div id="finish9_message"></div>
+    <div id="finish1_message"></div>
+    <div id="finish2_message"></div>
+    <div id="finish3_message"></div>
+    <div id="finish4_message"></div>
+    <div id="finish5_message"></div>
+    <div id="finish6_message"></div>
+    <div id="finish7_message"></div>
+
+<input type="button" id="button_confirm" onclick="func5()" value="完了">
+
+    <input type="submit" id="submitform" value="アップロード">
+
+
+    </div>
+
+
+    <div id="tab2_cnt" class="NonActive">
+
+      <br>
+      <input type="button" id="button" onclick="func4()" value="クルーの予定をダウンロード">
+      <p class="result_output">結果</p>
+      <p class="hint_message"></p>
+
+  </div>
+</form>
+
+
+    <script src="main.js" defer></script>
+  </body>
+</html>
